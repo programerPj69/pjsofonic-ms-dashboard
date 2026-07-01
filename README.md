@@ -2,9 +2,6 @@
 # PjSofonic MS - Integrated Management System
 PjSofonic MS is a comprehensive Enterprise Resource Planning (ERP) solution designed specifically for software development companies. It consolidates employee management, project tracking, CRM, and internal collaboration into a single, efficient platform...
 
-![images] (https://kommodo.ai/i/1ojME2D714Kz2D8Ib2ex)
-![images2] ( https://kommodo.ai/i/CoCfBEbSvnebtFhG4AgP)
-
 ## 🚀 Key Features
 
 * **HR & Employee Management:** Attendance tracking, payroll generation, aur leave management.
