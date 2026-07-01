@@ -2,6 +2,8 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Poppins, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { AuthProvider } from '@/lib/auth'
+import { StoreProvider } from '@/lib/store'
 
 const inter = Inter({ variable: '--font-inter', subsets: ['latin'] })
 const poppins = Poppins({
@@ -57,7 +59,9 @@ export default function RootLayout({
       className={`light ${inter.variable} ${poppins.variable} ${geistMono.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        {children}
+        <AuthProvider>
+          <StoreProvider>{children}</StoreProvider>
+        </AuthProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

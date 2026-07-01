@@ -3,9 +3,12 @@ import { cn } from '@/lib/utils'
 export function BrandLogo({
   className,
   showText = true,
+  variant = 'light',
 }: {
   className?: string
   showText?: boolean
+  /** "light" = white text (for dark backgrounds), "dark" = dark text (for light backgrounds) */
+  variant?: 'light' | 'dark'
 }) {
   return (
     <div className={cn('flex items-center gap-2.5', className)}>
@@ -20,7 +23,12 @@ export function BrandLogo({
       </div>
       {showText && (
         <div className="flex flex-col leading-none">
-          <span className="font-heading text-[15px] font-bold text-white">
+          <span
+            className={cn(
+              'font-heading text-[15px] font-bold',
+              variant === 'light' ? 'text-white' : 'text-foreground',
+            )}
+          >
             PjSofonic
           </span>
           <span className="text-[11px] font-medium tracking-widest text-[#00bfa6]">
